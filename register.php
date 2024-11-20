@@ -1,7 +1,7 @@
 <?php
 include 'layout/header.php';
 
-if (isset($_SESSION["login"])) {
+if (isset($_SESSION["up"])) {
     echo "<script>
             alert('Login berhasil');
             document.location.href = 'index.php';
@@ -9,7 +9,7 @@ if (isset($_SESSION["login"])) {
     exit;
 }
 
-if (isset($_POST['login'])) {
+if (isset($_POST['up'])) {
     login($_POST);
 }
 ?>
@@ -113,22 +113,24 @@ if (isset($_POST['login'])) {
     <form action="" method="post">
         <div class="container">
             <div class="form-section">
-                <h1>WELCOME BACK!!</h1>
+                <h1>Register!!</h1>
                 <div class="form-group">
+                <label for="username">Nama:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan Nama Anda">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" placeholder="Masukkan Username">
                 </div>
+                <select name="role" class="form-control">
+                    <option value="admin">Admin</option>
+                    <option value="anggota">Anggota</option>
+                </select>
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="Masukkan Password">
                 </div>
-                <div class="form-group">
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="login-btn" name="login">Login Now</button>
-                <div class="register-link">
-                    Don't have an account? <a href="register.php">Register</a>
-                </div>
+              
+                <button type="submit" class="daftar-btn" name="up">Daftar Sekarang</button>
+               
             </div>
             <div class="image-section">
                 <img src="img/Login/owalah iya paham.jpg" alt="Owal Emoji">

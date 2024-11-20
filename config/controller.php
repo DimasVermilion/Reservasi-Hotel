@@ -1,4 +1,15 @@
 <?php
+function select($query)
+{
+    global $db;
+    $result = mysqli_query($db, $query);
+    $rows = [];
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    }
+    return $rows;
+}
 function loginn($post) {
     global $db;
     $username = $post['username'];
@@ -23,17 +34,7 @@ function loginn($post) {
     }
 }
 
-function login($post) { 
-global $db;
-$username =$post['username'];
-$username =$post['password'];
 
-$result = mysqli_query($db, "SELECT * FROM user WHERE username = '$username'");
-
-if (mysqli_num_rows($result) == 1) {
-    $hasil = mysqli_fetch_assoc($result);
-    $pw = $hasil['password'];
-}
     
-}
+
 ?>
