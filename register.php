@@ -1,17 +1,16 @@
 <?php
-session_start();
 include 'layout/header.php';
 
 if (isset($_SESSION["up"])) {
     echo "<script>
-            alert('regisiter berhasil');
+            alert('Login berhasil');
             document.location.href = 'index.php';
           </script>";
     exit;
 }
 
 if (isset($_POST['up'])) {
-    register($_POST);
+    login($_POST);
 }
 ?>
 
@@ -121,7 +120,7 @@ if (isset($_POST['up'])) {
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" placeholder="Masukkan Username">
                 </div>
-                <select name="level" class="form-control">
+                <select name="role" class="form-control">
                     <option value="admin">Admin</option>
                     <option value="anggota">Anggota</option>
                 </select>

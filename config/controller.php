@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e5f3af291a41edac5341ad6eb360438ad70c1c2
 function select($query)
 {
     global $db;
@@ -37,6 +40,7 @@ function loginn($post) {
 }
 
 
+<<<<<<< HEAD
 function register($post)
 {
     global $db;
@@ -50,3 +54,8 @@ function register($post)
 
     return mysqli_affected_rows($db);
 }
+=======
+    
+
+?>
+>>>>>>> 5e5f3af291a41edac5341ad6eb360438ad70c1c2
