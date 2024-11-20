@@ -10,7 +10,7 @@ if (isset($_SESSION["up"])) {
 }
 
 if (isset($_POST['up'])) {
-    login($_POST);
+    register($_POST);
 }
 ?>
 
@@ -120,7 +120,7 @@ if (isset($_POST['up'])) {
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" placeholder="Masukkan Username">
                 </div>
-                <select name="role" class="form-control">
+                <select name="level" class="form-control">
                     <option value="admin">Admin</option>
                     <option value="anggota">Anggota</option>
                 </select>

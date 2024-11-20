@@ -12,7 +12,7 @@ if (isset($_SESSION['login'])) {
 }
 
 if (isset($_POST['login'])) {
-    login($_POST);
+    loginn($_POST);
 }
 ?>
 

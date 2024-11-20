@@ -1,8 +1,8 @@
 <?php
-<<<<<<< HEAD
+ 
 
-=======
->>>>>>> 5e5f3af291a41edac5341ad6eb360438ad70c1c2
+
+
 function select($query)
 {
     global $db;
@@ -40,22 +40,22 @@ function loginn($post) {
 }
 
 
-<<<<<<< HEAD
+ 
 function register($post)
 {
     global $db;
+    $nama           =$post['nama'];
     $username       = $post['username'];
     $password       = $post['password'];
     $level          = $post['level'];  
 
-    $query = "INSERT INTO user VALUES(null, '$username', '$password',
+    $query = "INSERT INTO user VALUES(null,'$nama', '$username', '$password',
                                 '$level')";
     mysqli_query($db, $query);
 
     return mysqli_affected_rows($db);
 }
-=======
+
     
 
 ?>
->>>>>>> 5e5f3af291a41edac5341ad6eb360438ad70c1c2
