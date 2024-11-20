@@ -1,4 +1,16 @@
 <?php
+
+function select($query)
+{
+    global $db;
+    $result = mysqli_query($db, $query);
+    $rows = [];
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    }
+    return $rows;
+}
 function loginn($post) {
     global $db;
     $username = $post['username'];
@@ -16,6 +28,7 @@ function loginn($post) {
 
             if ($hasil['role'] == 'admin') {
                 header("location: index.php");
+                exit;
             }
         } else {
             echo "password salah";
@@ -23,17 +36,17 @@ function loginn($post) {
     }
 }
 
-function login($post) { 
-global $db;
-$username =$post['username'];
-$username =$post['password'];
 
-$result = mysqli_query($db, "SELECT * FROM user WHERE username = '$username'");
+function register($post)
+{
+    global $db;
+    $username       = $post['username'];
+    $password       = $post['password'];
+    $level          = $post['level'];  
 
-if (mysqli_num_rows($result) == 1) {
-    $hasil = mysqli_fetch_assoc($result);
-    $pw = $hasil['password'];
+    $query = "INSERT INTO user VALUES(null, '$username', '$password',
+                                '$level')";
+    mysqli_query($db, $query);
+
+    return mysqli_affected_rows($db);
 }
-    
-}
-?>

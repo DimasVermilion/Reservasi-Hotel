@@ -96,7 +96,7 @@ include 'config/app.php';
     </div>
     <div class="navbar-actions">
         <a href="login.php" class="button login">Log In</a>
-        <a href="#" class="button register">Register</a>
+        <a href="register.php" class="button register">Register</a>
     </div>
 </nav>
 
