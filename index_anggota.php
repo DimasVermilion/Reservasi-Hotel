@@ -1,12 +1,12 @@
 <?php
 include 'layout/header.php';
-
+$data_kamar = select("SELECT * FROM kamar");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Trispace:wght@300;400;700&display=swap" rel="stylesheet">
@@ -217,9 +217,6 @@ include 'layout/header.php';
     </style>
 </head>
 <body>
-    
-
-
     <div class="dashboard">
         <div class="welcome">
             <h1>SELAMAT DATANG DI THE ROYAL PENTHOUSE!</h1>

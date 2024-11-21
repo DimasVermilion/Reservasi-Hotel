@@ -60,12 +60,16 @@ include 'config/app.php';
             font-size: 1rem;
             margin-left: 0.5rem;
             transition: background-color 0.3s ease;
+            background-color: #218838;
         }
         .navbar-actions .login {
             background-color: #007bff;
         }
-        .navbar-actions .register {
-            background-color: #28a745;
+        .navbar-actions .logout {
+            background-color: red;
+        }
+        .navbar-action .tambah{
+            background-color: green;
         }
         .navbar-actions .button:hover {
             background-color: #0056b3;
@@ -95,8 +99,12 @@ include 'config/app.php';
         <a href="#">Fasilitas Kamar</a>
     </div>
     <div class="navbar-actions">
+    <a href="tambah_kamar.php" class="button tambah ">tambah kamar</a>
         <a href="login.php" class="button login">Log In</a>
-        <a href="register.php" class="button register">Register</a>
+        <a href="logout.php" class="button logout">Log out</a>
+       
+
+      
     </div>
 </nav>
 
